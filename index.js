@@ -1,8 +1,8 @@
 require("dotenv").config();
 
-const server = require("./api/server.js");
+import { listen } from "./api/server.js";
 
 const port = process.env.PORT;
-server.listen(port, () => {
+listen(port, () => {
 	console.log(`\n*** Server Running on http://localhost:${port} ***\n`);
 });
